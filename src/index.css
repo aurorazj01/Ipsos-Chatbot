@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ipsos-blue: #003399;
+  --color-ipsos-red: #E4002B;
+}
