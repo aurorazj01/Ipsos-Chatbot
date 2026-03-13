@@ -176,7 +176,7 @@ export default function App() {
             <div className="p-6 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-6 h-6 text-white" />
-                <span className="font-bold text-lg tracking-tight">项目记录</span>
+                <span className="font-bold text-lg tracking-tight">聊天记录</span>
               </div>
               <button onClick={() => setIsSidebarOpen(false)} className="lg:hidden">
                 <X className="w-5 h-5" />
@@ -250,7 +250,7 @@ export default function App() {
               onClick={() => setShowZen(!showZen)}
               className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
                 showZen 
-                  ? 'bg-ipsos-blue text-white shadow-md' 
+                  ? 'bg-ipsos-teal text-white shadow-md' 
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
@@ -286,7 +286,7 @@ export default function App() {
                   className={`flex gap-4 ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}
                 >
                   <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg ${
-                    msg.role === 'user' ? 'bg-ipsos-red' : 'bg-ipsos-blue'
+                    msg.role === 'user' ? 'bg-ipsos-teal' : 'bg-ipsos-blue'
                   }`}>
                     {msg.role === 'user' ? (
                       <User className="text-white w-5 h-5" />
@@ -298,8 +298,8 @@ export default function App() {
                   <div className={`flex flex-col max-w-[80%] ${msg.role === 'user' ? 'items-end' : ''}`}>
                     <div className={`px-6 py-4 rounded-2xl text-[15px] leading-relaxed shadow-sm transition-all ${
                       msg.role === 'user' 
-                        ? 'bg-ipsos-red text-white rounded-tr-none' 
-                        : 'bg-white text-gray-800 rounded-tl-none border border-ipsos-blue/5'
+                        ? 'bg-ipsos-teal text-white rounded-tr-none' 
+                        : 'bg-white text-gray-800 rounded-tl-none border border-ipsos-blue/10'
                     }`}>
                       <div className={`markdown-body prose prose-sm max-w-none ${msg.role === 'user' ? 'prose-invert' : ''}`}>
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
@@ -318,7 +318,7 @@ export default function App() {
                   <div className="w-10 h-10 rounded-xl bg-ipsos-blue flex items-center justify-center shadow-lg">
                     <Bot className="text-white w-5 h-5" />
                   </div>
-                  <div className="flex items-center gap-2 px-6 py-4 bg-white rounded-2xl border border-ipsos-blue/5 shadow-sm">
+                  <div className="flex items-center gap-2 px-6 py-4 bg-white rounded-2xl border border-ipsos-blue/10 shadow-sm">
                     <div className="w-1.5 h-1.5 bg-ipsos-blue rounded-full animate-bounce" />
                     <div className="w-1.5 h-1.5 bg-ipsos-blue rounded-full animate-bounce [animation-delay:0.2s]" />
                     <div className="w-1.5 h-1.5 bg-ipsos-blue rounded-full animate-bounce [animation-delay:0.4s]" />
@@ -372,7 +372,7 @@ export default function App() {
                 <button
                   key={suggestion}
                   onClick={() => setInput(suggestion)}
-                  className="px-5 py-2.5 bg-white border border-ipsos-blue/10 rounded-full text-xs font-medium text-gray-600 hover:border-ipsos-blue hover:text-ipsos-blue transition-all shadow-sm hover:shadow-md"
+                  className="px-5 py-2.5 bg-white border border-ipsos-teal/10 rounded-full text-xs font-medium text-gray-600 hover:border-ipsos-teal hover:text-ipsos-teal transition-all shadow-sm hover:shadow-md"
                 >
                   {suggestion}
                 </button>

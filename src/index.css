@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ipsos-blue: #003399;
-  --color-ipsos-red: #E4002B;
+  --color-ipsos-blue: #2F469C;
+  --color-ipsos-teal: #009D9C;
 }
